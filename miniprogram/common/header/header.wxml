@@ -1,0 +1,14 @@
+  <view class="head-root">
+    <!-- <scroll-view class="marquee" scroll-x="true" bindscroll="onScroll" scroll-left="{{scrollLeft}}">
+      <view class="marquee-content">
+        {{title}}JLASFJFDSKLKFAKLJDFSALKAFDLKJFDALKJFDLKFLADSKFADLKKLFJDASKJLFADKLFADKJLKLFDSALJKFDASKJFADSJK
+      </view>
+    </scroll-view> -->
+     <view class="head-box">
+      <scroll-view class="top-scroll-view" scroll-x="true" scroll-with-animation="true" bindscroll="onScroll" style="white-space: nowrap;">
+        <view class="scroll-text-wrapper" style="display: inline-block;">
+          <!-- <text class="scroll-text duplicate">{{title}}</text> 重复文本以确保连续滚动 -->
+          <slot></slot>
+        </view>
+      </scroll-view></view>
+  </view>

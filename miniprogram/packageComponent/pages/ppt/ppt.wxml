@@ -1,0 +1,19 @@
+<!--packageComponent/pages/ppt/ppt.wxml-->
+<view>
+  <common-header>
+    <view>
+      <text class="common-header-txt">点击下面模板即可获取，内容持续更新中，更多资源请关注公众号“</text>
+      <text class="common-header-txt common-header-txt-important">LISMIN</text>
+      <text class="common-header-txt">"，回复”</text>
+      <text class="common-header-txt common-header-txt-important">获取ppt</text>
+      <text class="common-header-txt">”即可获取海量模板</text>
+    </view>
+  </common-header>
+  <view class="ppt-root">
+    <view class="ppt-box" wx:for="{{pptList}}" wx:for-index="index" wx:key="*this" bind:tap="onOpenTipsModal">
+      <image class="img" src="img/{{1}}.jpg" alt="暂无资源"/>
+      <text class="txt">{{item.name}}</text>
+    </view>
+    <tips-modal tipShow="{{tipShow}}" title="{{title}}" desc="{{desc}}" url="{{url}}"  bindmyCustomEvent="handleCustomEvent"></tips-modal>
+  </view>
+</view>

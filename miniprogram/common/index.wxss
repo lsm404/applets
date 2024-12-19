@@ -109,3 +109,11 @@
 .kind-list-item-bd-show {
   height: auto;
 }
+.common-header-txt {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.common-header-txt-important {
+  color: red;
+}

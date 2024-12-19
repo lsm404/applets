@@ -3,12 +3,20 @@
     "page/component/index",
     "page/API/index",
     "page/cloud/index",
-    "page/extend/index"
+    "page/extend/index",
+    "common/header/header",
+    "pages/curriculum/curriculum",
+    "pages/ppt/ppt"
   ],
+  "usingComponents": {
+    "common-header": "common/header/header"
+  },
   "subpackages": [
     {
       "root": "packageComponent",
       "pages": [
+        "pages/ppt/ppt",
+        "pages/curriculum/curriculum",
         "pages/view/view/view",
         "pages/view/scroll-view/scroll-view",
         "pages/view/swiper/swiper",
@@ -226,25 +234,19 @@
         "pagePath": "page/component/index",
         "iconPath": "@iconPathComponent",
         "selectedIconPath": "@selectedIconPathComponent",
-        "text": "组件"
+        "text": "目录"
       },
       {
-        "pagePath": "page/extend/index",
+        "pagePath": "pages/curriculum/curriculum",
         "iconPath": "@iconPathComponent",
         "selectedIconPath": "@selectedIconPathComponent",
-        "text": "扩展能力"
+        "text": "待开发"
       },
       {
-        "pagePath": "page/API/index",
+        "pagePath": "pages/ppt/ppt",
         "iconPath": "@iconPathAPI",
         "selectedIconPath": "@selectedIconPathAPI",
-        "text": "接口"
-      },
-      {
-        "pagePath": "page/cloud/index",
-        "iconPath": "@iconPathCloud",
-        "selectedIconPath": "@selectedIconPathCloud",
-        "text": "云开发"
+        "text": "待开发"
       }
     ]
   },
@@ -271,7 +273,12 @@
     "weui": true
   },
   "frameset": true,
-  "requiredBackgroundModes": ["audio", "location"],
-  "embeddedAppIdList": ["wxfdcee92a299bcaf1"],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "embeddedAppIdList": [
+    "wxfdcee92a299bcaf1"
+  ],
   "lazyCodeLoading": "requiredComponents"
 }

@@ -15,6 +15,7 @@ page {
 page>view {
   width: 100vw;
   max-width: 600px;
+  height: auto;
 }
 checkbox, radio{
   margin-right: 5px;

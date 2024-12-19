@@ -1,0 +1,28 @@
+/* packageComponent/pages/ppt/ppt.wxss */
+@import "../../../common/index.wxss";
+
+.ppt-root {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(auto-fill, 130px);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.ppt-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: calc(50% - 12px); */
+}
+
+.img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.txt {
+  color: rgb(231, 115, 37);
+}

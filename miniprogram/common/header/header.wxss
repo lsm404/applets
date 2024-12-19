@@ -1,0 +1,42 @@
+/* common/header/header.wxss */
+.head-box {
+  height: 30px;
+  background: rgb(243, 243, 103);
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  line-height: 30px;
+  top:0;
+}
+
+.head-root {
+  margin-bottom: 20px;
+}
+
+.top-scroll-view {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-text-wrapper {
+  animation: scroll-left 20s linear infinite; /* 使用CSS动画实现滚动 */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-text {
+  margin: 0 20px; /* 文字之间的间距 */
+}
+.duplicate {
+  margin-left: -20px; /* 确保重复文本紧挨着原始文本 */
+  font-size: 12px;
+  font-weight: 700;
+}

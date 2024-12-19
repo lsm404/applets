@@ -64,6 +64,8 @@
 }
 .navigator-text {
   flex: 1;
+  font-size: 14px;
+  padding-left: 10px;
 }
 .navigator-arrow {
   /* padding-right: 13px; */
@@ -103,6 +105,7 @@
 }
 .kind-list-text{
   flex: 1;
+  font-weight: 700;
 }
 .kind-list-img {
   /* width: 30px;
@@ -119,7 +122,8 @@
   transition: opacity .3s;
 }
 .kind-list-item-hd-show {
-  opacity: .2;
+  /* opacity: .2; */
+  color: red;
 }
 .kind-list-item-bd {
   height: 0;
@@ -127,4 +131,13 @@
 }
 .kind-list-item-bd-show {
   height: auto;
+}
+
+.common-header-txt {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.common-header-txt-important {
+  color: red;
 }

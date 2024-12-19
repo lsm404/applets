@@ -1,6 +1,6 @@
 Page({
   onShow() {
-    wx.reportAnalytics('enter_home_programmatically', {})
+    wx.reportEvent('enter_home_programmatically', {})
 
     // http://tapd.oa.com/miniprogram_experiment/prong/stories/view/1020425689866413543
     if (wx.canIUse('getExptInfoSync')) {
@@ -34,55 +34,114 @@ Page({
         id: 'profile',
         name: '资料',
         open: false,
-        pages: ['上岸熊教资面试全套资料全学科', 'scroll-view', 'swiper', 'movable-view', 'cover-view']
-      }, {
-        id: 'content',
-        name: '基础内容',
+        option: [
+          // { name: '教资', page: 'teaching'},
+          { name: '简历模版', page: 'curriculum'},
+        ],
+        pages: ['view', 'scroll-view', 'swiper', 'movable-view', 'cover-view']
+      },
+      {
+        id: 'ppt',
+        name: 'PPT',
         open: false,
-        pages: ['text', 'icon', 'progress', 'rich-text']
-      }, {
-        id: 'form',
-        name: '表单组件',
-        open: false,
-        pages: ['button', 'checkbox', 'form', 'input', 'label', 'picker', 'picker-view', 'radio', 'slider', 'switch', 'textarea', 'editor']
-      }, {
-        id: 'nav',
-        name: '导航',
-        open: false,
-        pages: ['navigator']
-      }, {
-        id: 'media',
-        name: '媒体组件',
-        open: false,
-        pages: ['image', 'video', 'camera', 'live-pusher', 'live-player']
-      }, {
-        id: 'map',
-        name: '地图',
-        open: false,
-        pages: ['map', { appid: 'wxe3f314db2e921db0', name: '腾讯位置服务示例中心'}]
-      }, {
-        id: 'canvas',
-        name: '画布',
-        open: false,
-        pages: ['canvas-2d', 'webgl']
-      }, {
-        id: 'open',
-        name: '开放能力',
-        open: false,
-        pages: ['ad', 'open-data', 'web-view']
-      }, {
-        id: 'obstacle-free',
-        name: '无障碍访问',
-        open: false,
-        pages: ['aria-component']
-      }
+        option: [
+          { name: '蛇年PPT', page: 'ppt', show: 1 },
+        ],
+      },
+      //  {
+      //   id: 'content',
+      //   name: '基础内容',
+      //   open: false,
+      //   option: [
+      //     { name: 'text', page: 'text'},
+      //     { name: 'icon', page: 'icon'},
+      //     { name: 'progress', page: 'progress'},
+      //     { name: 'rich-text', page: 'rich-text'},
+      //   ],
+      //   pages: ['text', 'icon', 'progress', 'rich-text']
+      // }, {
+      //   id: 'form',
+      //   name: '表单组件',
+      //   open: false,
+      //   option: [
+      //     { name: 'button', page: 'button'},
+      //     { name: 'checkbox', page: 'checkbox'},
+      //     { name: 'form', page: 'form'},
+      //     { name: 'input', page: 'input'},
+      //     { name: 'label', page: 'label'},
+      //     { name: 'picker', page: 'picker'},
+      //     { name: 'picker-view', page: 'picker-view'},
+      //     { name: 'radio', page: 'radio'},
+      //     { name: 'slider', page: 'slider'},
+      //     { name: 'switch', page: 'switch'},
+      //     { name: 'textarea', page: 'textarea'},
+      //     { name: 'editor', page: 'editor'},
+      //   ],
+      //   pages: ['button', 'checkbox', 'form', 'input', 'label', 'picker', 'picker-view', 'radio', 'slider', 'switch', 'textarea', 'editor']
+      // }, {
+      //   id: 'nav',
+      //   name: '导航',
+      //   open: false,
+      //   option: [
+      //     { name: 'navigator', page: 'navigator'},
+      //   ],
+      //   pages: ['navigator']
+      // }, {
+      //   id: 'media',
+      //   name: '媒体组件',
+      //   open: false,
+      //   option: [
+      //     { name: 'image', page: 'image'},
+      //     { name: 'video', page: 'video'},
+      //     { name: 'camera', page: 'camera'},
+      //     { name: 'live-pusher', page: 'live-pusher'},
+      //     { name: 'live-player', page: 'live-player'},
+      //   ],
+      //   pages: ['image', 'video', 'camera', 'live-pusher', 'live-player']
+      // }, {
+      //   id: 'map',
+      //   name: '地图',
+      //   open: false,
+      //   option: [
+      //     { name: 'map', page: 'text'},
+      //     { appid: 'wxe3f314db2e921db0', name: '腾讯位置服务示例中心'}
+      //   ],
+      //   pages: ['map', { appid: 'wxe3f314db2e921db0', name: '腾讯位置服务示例中心'}]
+      // }, {
+      //   id: 'canvas',
+      //   name: '画布',
+      //   open: false,
+      //   option: [
+      //     { name: 'canvas-2d', page: 'canvas-2d'},
+      //     { name: 'webgl', page: 'webgl'},
+      //   ],
+      //   pages: ['canvas-2d', 'webgl']
+      // }, {
+      //   id: 'open',
+      //   name: '开放能力',
+      //   open: false,
+      //   option: [
+      //     { name: 'ad', page: 'ad'},
+      //     { name: 'open-data', page: 'open-data'},
+      //     { name: 'web-view', page: 'web-view'},
+      //   ],
+      //   pages: ['ad', 'open-data', 'web-view']
+      // }, {
+      //   id: 'obstacle-free',
+      //   name: '无障碍访问',
+      //   open: false,
+      //   option: [
+      //     { name: 'aria-component', page: 'aria-component'},
+      //   ],
+      //   pages: ['aria-component']
+      // }
     ],
     theme: 'light'
   },
 
   onLoad() {
     this.setData({
-      theme: wx.getSystemInfoSync().theme || 'light'
+      theme: wx.getSystemSetting().theme || 'light'
     })
 
     if (wx.onThemeChange) {
