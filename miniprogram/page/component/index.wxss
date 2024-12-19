@@ -4,3 +4,7 @@
   display: inline;
   color: var(--weui-LINK);
 }
+
+.page {
+  background: #F7F7F7;
+}

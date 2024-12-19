@@ -54,13 +54,8 @@ App({
   onHide() {
     console.log('App Hide')
   },
-  onThemeChange({ theme }) {
-    this.globalData.theme = theme
-    themeListeners.forEach((listener) => {
-        listener(theme)
-    })
-  },
   watchThemeChange(listener) {
+    console.log(123)
       if (themeListeners.indexOf(listener) < 0) {
           themeListeners.push(listener)
       }
@@ -72,7 +67,7 @@ App({
       }
   },
   globalData: {
-    theme: wx.getSystemInfoSync().theme,
+    theme: 'light',
     hasLogin: false,
     openid: null,
     iconTabbar: '/page/weui/example/images/icon_tabbar.png',

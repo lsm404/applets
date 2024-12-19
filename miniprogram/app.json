@@ -1,7 +1,6 @@
 {
   "pages": [
     "page/component/index",
-    "common/header/header",
     "pages/curriculum/curriculum",
     "pages/ppt/ppt"
   ],
@@ -13,8 +12,7 @@
       "root": "packageComponent",
       "pages": [
         "pages/ppt/ppt",
-        "pages/curriculum/curriculum",
-        "pages/view/view/view"
+        "pages/curriculum/curriculum"
       ]
     }
   ],
@@ -30,7 +28,7 @@
     "navigationBarTextStyle": "@navigationBarTextStyle",
     "navigationBarTitleText": "小助手",
     "navigationBarBackgroundColor": "@navigationBarBackgroundColor",
-    "backgroundColor": "@backgroundColor"
+    "backgroundColor": "#ffc"
   },
   "tabBar": {
     "color": "@tabBarColor",

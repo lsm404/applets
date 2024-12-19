@@ -1,4 +1,4 @@
-<view class="page" data-weui-theme="{{theme}}">
+<view class="page">
   <common-header>
     <view>
       <text class="common-header-txt">内容持续更新中，更多资源请关注公众号“</text>
